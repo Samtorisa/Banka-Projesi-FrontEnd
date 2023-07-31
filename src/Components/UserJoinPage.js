@@ -10,9 +10,7 @@ function UserJoinPage() {
     const navigate =useNavigate();
     const [mail, setMail]=useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
-    const [session,setSession]=useState(false);
-  
+    const [error, setError] = useState("");  
     const handleMailChange = (value) => {
       setMail(value);
     };
@@ -49,41 +47,19 @@ function UserJoinPage() {
     };
     const handleLogin=()=>{
       sendRequest("login");
-      setSession(!session);
       if(localStorage.getItem("currentCustomer") !=null){
-        navigate("/ACTP");
+        navigate("/AccountHomePage");
         
       }
       else {
         alert("E-posta ya da şifre yanlış ya da hesap yok (Doğru olduğundan eminseniz diğer alanları boş bırakarak tekrar giriş yapa tıklayın sonradan düzelteceğim burayı)");
-        //setSession(false);
       }
       
       
 
     };
 
-   /* useEffect(()=>{
-    if(session ==false)
-
-    {
-        alert("E-posta ve şifrenizi giriniz ya da hesap oluşturunuz ")
-
-    }else{
-
-
-      if(localStorage.getItem("currentCustomer") !=null){
-        navigate("/ACTP");
-        
-      }
-      else {
-        alert("E-posta ya da şifre yanlış ya da hesap yok");
-        setSession(false);
-      }}*
-
-
-
-    },[session]);*/
+   
      return(
   
         <div className="boxx">

@@ -9,7 +9,7 @@ import CreateAccount from './CreateAccount';
 
 
 
-function ACTP(){
+function AccountHomePage(){
     const navigate =useNavigate();
 
   const [isOpen,setIsOpen]=useState(false);
@@ -175,7 +175,5 @@ useEffect(() => {
     )}
   }
 
-export default ACTP;
-  /*  {localStorage.getItem("currentUser") == null? "":
-                 <PostForm userId = {localStorage.getItem("currentUser")} 
-                 userName = {localStorage.getItem("userName")}  refreshPosts = {refreshPosts}/>}*/
+export default AccountHomePage;
+ 

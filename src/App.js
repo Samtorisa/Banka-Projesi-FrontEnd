@@ -5,7 +5,7 @@ import UserJoinPage from './Components/UserJoinPage';
 import { BrowserRouter as Router, Switch, Route, Link, Routes,Navigate } from "react-router-dom";
 import "./App.css";
 
-import ACTP from "./Components/ACTP";
+import AccountHomePage from './Components/AccountHomePage';
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
         
       </Route>
      
-     <Route exact path="/ACTP" element={<ACTP/>}/>
+     <Route exact path="/AccountHomePage" element={<AccountHomePage/>}/>
      
      
    
